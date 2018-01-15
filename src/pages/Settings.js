@@ -3,13 +3,17 @@ import {  StyleSheet,
     Text,
     View,
     TextInput,
-    TouchableOpacity ,AppRegistry} from 'react-native';
+    TouchableOpacity ,Image,AppRegistry} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 
 export default class Settings extends React.Component {
     static navigationOptions = {
-        tabBarLabel : 'Settings'
+        tabBarLabel : 'Settings',
+        tabBarIcon: ({tintColor}) => (
+            <Image source={require('../images/settings.png')} 
+            style={{width: 30, height: 30 , tintColor: 'white'}}/>
+        )
     }
     render(){
         return(

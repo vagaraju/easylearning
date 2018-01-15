@@ -3,13 +3,17 @@ import {  StyleSheet,
     Text,
     View,
     TextInput,
-    TouchableOpacity ,AppRegistry} from 'react-native';
+    TouchableOpacity ,Image,AppRegistry} from 'react-native';
 
 
 
 export default class Map extends React.Component {
     static navigationOptions = {
-        tabBarLabel : 'Map'
+        tabBarLabel : 'Map',
+        tabBarIcon: ({tintColor}) => (
+            <Image source={require('../images/map.png')} 
+            style={{width: 30, height: 30 , tintColor: 'white'}}/>
+        )
     }
     render(){
         return(

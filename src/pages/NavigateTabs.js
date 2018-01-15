@@ -22,6 +22,7 @@ const NavigateTabs = TabNavigator({
         animationEnabled: true,
         tabBarOptions: {
             activeTintColor: '#ffffff',
+            showIcon: true,
         }
     });
 export default NavigateTabs;

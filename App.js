@@ -14,7 +14,11 @@ import {
 
 import Routes from './src/Routes';
 import firebase from 'firebase';
-
+<StatusBar
+translucent
+backgroundColor="rgba(0, 0, 0, 0.24)"
+animated
+/>
 export default class App extends Component<{}> {
 
   componentWillMount() {

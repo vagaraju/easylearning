@@ -2,14 +2,18 @@ import React from 'react';
 import {  StyleSheet,
     Text,
     View,
-    TextInput,
+    TextInput,Image,
     TouchableOpacity ,AppRegistry} from 'react-native';
 
 
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        tabBarLabel : 'Home'
+        tabBarLabel : 'Home',
+        tabBarIcon: ({tintColor}) => (
+            <Image source={require('../images/home.png')} 
+            style={{width: 30, height: 30 , tintColor: 'white'}}/>
+        )
     }
     render(){
         return(
