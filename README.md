@@ -1,7 +1,8 @@
 # easylearning
 ===================
-# easylearning
-sample project for easy learning for kids using  react native technology.
+easy learning proeject for kids using  react native technology.
+
+Windows Project setup for Android(needs to follow differenct instructions for IOS)
 
 Softwares installation directory : D:\software\react
 Softwares needs to be installed to run this project.
