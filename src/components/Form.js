@@ -19,15 +19,22 @@ export default class Form extends Component<{}> {
     super(props);
     this.state = {loading: true, email :"vagarajug@gmail.com", password : "Vaga101g!",error: ""};
    }
+   errorCall = (errMsg) => {
+    Actions.error(errMsg);
+   }
   onPress = () => {
     console.log('Console statements for login process...');
     let pageType = this.props.type;
     let emailVal = this.state.email;
     let passwordVal = this.state.password;
 
+    if(passwordVal.length < 6) {
+      this.errorCall('password should be greater than 5 characters.');
+    }
+
     if (pageType === 'Login') {
      firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal)
-      .then(() => {    Actions.profile();
+      .then(() => {    Actions.dashBoard();
          this.setState({ error: '', loading: false }); })
       .catch(() => {
           console.log('login not successful.');
@@ -73,9 +80,7 @@ export default class Form extends Component<{}> {
            <TouchableOpacity style={styles.button}  onPress={this.onPress}>
              <Text style={styles.buttonText}>{this.props.type}</Text>
            </TouchableOpacity>     
-           <Text style={styles.errorTextStyle}>{this.state.error}</Text>
-         
-                    {this.renderButtonOrSpinner()}
+           {this.renderButtonOrSpinner()}
   		</View>
 			)
 	}
