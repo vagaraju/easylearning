@@ -10,8 +10,8 @@ import { Actions } from 'react-native-router-flux';
 export default class DashBoard extends React.Component {
     render(){
         return(
-            <View>
-                <Text style={styles.buttonText}> which explains the easyLearning concepts.</Text>
+            <View style={styles.container}>
+                <Text style={styles.buttonText}> Explains the easyLearning concepts.</Text>
             </View>
         );
     }

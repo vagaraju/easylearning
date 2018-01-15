@@ -10,8 +10,8 @@ export default class Logo extends Component<{}> {
 	render(){
 		return(
 			<View style={styles.container}>
-				<Image  style={{width:40, height: 70}}
-          			source={require('../images/raju.jpg')}/>
+				<Image  style={{width:200, height: 80}}
+          			source={require('../images/study.jpg')}/>
           		<Text style={styles.logoText}>Welcome to easyLearning</Text>	
   			</View>
 			)
