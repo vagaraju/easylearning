@@ -6,17 +6,20 @@ import {  StyleSheet,
     TouchableOpacity ,AppRegistry} from 'react-native';
 
 
-import NavigateTabs from './NavigateTabs';
 
-
-export default class DashBoard extends React.Component {
+export default class Map extends React.Component {
+    static navigationOptions = {
+        tabBarLabel : 'Map'
+    }
     render(){
         return(
-            <NavigateTabs  />
+            <View style={styles.container}>
+                <Text style={styles.buttonText}> Shows the GPS navigation for office location.</Text>
+            </View>
         );
     }
 }
-AppRegistry.registerComponent("DashBoard",() => DashBoard);
+AppRegistry.registerComponent("Home",() => Home);
 
 const styles = StyleSheet.create({
     container : {

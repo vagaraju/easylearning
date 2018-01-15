@@ -4,19 +4,22 @@ import {  StyleSheet,
     View,
     TextInput,
     TouchableOpacity ,AppRegistry} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 
-import NavigateTabs from './NavigateTabs';
-
-
-export default class DashBoard extends React.Component {
+export default class Contact extends React.Component {
+    static navigationOptions = {
+        tabBarLabel : 'Contact'
+    }
     render(){
         return(
-            <NavigateTabs  />
+            <View style={styles.container}>
+                <Text style={styles.buttonText}> office contact information.</Text>
+            </View>
         );
     }
 }
-AppRegistry.registerComponent("DashBoard",() => DashBoard);
+AppRegistry.registerComponent("Contact",() => Contact);
 
 const styles = StyleSheet.create({
     container : {

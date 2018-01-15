@@ -5,18 +5,26 @@ import {  StyleSheet,
     TextInput,
     TouchableOpacity ,AppRegistry} from 'react-native';
 
+import {TabNavigator} from 'react-navigation';
 
-import NavigateTabs from './NavigateTabs';
+import Contact from './Contact';
+import Home from './Home';
+import Settings from './Settings';
+import Map from './Map';
 
-
-export default class DashBoard extends React.Component {
-    render(){
-        return(
-            <NavigateTabs  />
-        );
-    }
-}
-AppRegistry.registerComponent("DashBoard",() => DashBoard);
+const NavigateTabs = TabNavigator({
+    Home: { screen: Home },
+    Map: { screen: Map },
+    Settings: { screen: Settings },
+    Contact: { screen: Contact }
+    }, {
+        tabBarPosition: 'bottom',
+        animationEnabled: true,
+        tabBarOptions: {
+            activeTintColor: '#ffffff',
+        }
+    });
+export default NavigateTabs;
 
 const styles = StyleSheet.create({
     container : {

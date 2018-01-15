@@ -19,6 +19,9 @@ export default class Form extends Component<{}> {
     super(props);
     this.state = {loading: true, email :"vagarajug@gmail.com", password : "Vaga101g!",error: ""};
    }
+   static navigatorStyle = {
+    tabBarHidden: true
+};
    errorCall = (errMsg) => {
     Actions.error(errMsg);
    }
