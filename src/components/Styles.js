@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
   tabImageColor:
   {width: 30, height: 30 , tintColor: 'white'},
   signupTextCont : {
-  	flexGrow: 1,
-    alignItems:'flex-end',
+    alignItems:'center',
     justifyContent :'center',
     paddingVertical:16,
     flexDirection:'row'
@@ -42,7 +41,22 @@ const styles = StyleSheet.create({
   	color:'#ffffff',
   	fontSize:16,
   	fontWeight:'500'
-  }
+  },
+  inputBox: {
+    width:300,
+    backgroundColor:'rgba(255, 255,255,0.2)',
+    borderRadius: 25,
+    paddingHorizontal:16,
+    fontSize:16,
+    color:'#ffffff',
+    marginVertical: 10
+  }, 
+  errorTextStyle: {
+    color: '#E64A19',
+    alignSelf: 'center',
+    paddingTop: 10,
+    paddingBottom: 10
+}
 });
 module.exports = styles
 module.exports.constants = constants;

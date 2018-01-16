@@ -20,7 +20,7 @@ export default class Login extends Component<{}> {
 	render() {
 		return(
 			<View style={styles.container}>
-				<Logo/>
+				<Logo />
 				<Form type="Login"/>
 				<View style={styles.signupTextCont}>
 					<Text style={styles.signupText}>Don't have an account yet?</Text>
