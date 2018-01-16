@@ -4,7 +4,7 @@ import {  StyleSheet,
     View,
     TextInput,
     TouchableOpacity ,Image,AppRegistry} from 'react-native';
-
+import MapView from 'react-native-maps';
 
 
 export default class Map extends React.Component {
@@ -18,12 +18,20 @@ export default class Map extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.buttonText}> Shows the GPS navigation for office location.</Text>
+               {/* <MapView
+                    initialRegion={{
+                    latitude: 37.78825,
+                    longitude: -122.4324,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                    }}
+                /> */}
+               <Text> map needs to be displayed here. </Text>
             </View>
         );
     }
 }
-AppRegistry.registerComponent("Home",() => Home);
+AppRegistry.registerComponent("Map",() => Map);
 
 const styles = StyleSheet.create({
     container : {
