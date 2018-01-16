@@ -26,6 +26,7 @@ export default class Form extends Component<{}> {
     Actions.error(errMsg);
    }
   onPress = () => {
+    this.renderButtonOrSpinner();
     console.log('Console statements for login process...');
     let pageType = this.props.type;
     let emailVal = this.state.email;
@@ -34,7 +35,6 @@ export default class Form extends Component<{}> {
     if(passwordVal.length < 6) {
       this.errorCall('password should be greater than 5 characters.');
     }
-Actions.dashBoard();
     if (pageType === 'Login') {
      firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal)
       .then(() => {    Actions.dashBoard();
@@ -83,7 +83,7 @@ Actions.dashBoard();
            <TouchableOpacity style={styles.button}  onPress={this.onPress}>
              <Text style={styles.buttonText}>{this.props.type}</Text>
            </TouchableOpacity>     
-           {this.renderButtonOrSpinner()}
+          {/* {this.renderButtonOrSpinner()} */}
   		</View>
 			)
 	}
