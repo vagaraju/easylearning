@@ -10,6 +10,7 @@ import {
 import firebase from 'firebase';
 import Spinner from './Spinner';
 
+
 import { Actions } from 'react-native-router-flux';
 import { TxtInput,TxtButton } from '../common/HtmlControls';
 
@@ -17,7 +18,11 @@ import { TxtInput,TxtButton } from '../common/HtmlControls';
 export default class Form extends Component<{}> {
   constructor(props){
     super(props);
-    this.state = {loading: true, email :"vagarajug@gmail.com", password : "Vaga101g!",error: ""};
+    if (props.type === 'Login') {
+      this.state = {loading: true, email :"vagarajug@gmail.com", password : "Vaga101g!",error: ""};
+    } else {
+      this.state = {loading: true, email :"", password : "",error: ""};
+    }
    }
    static navigatorStyle = {
     tabBarHidden: true
@@ -26,12 +31,11 @@ export default class Form extends Component<{}> {
     Actions.error(errMsg);
    }
   onPress = () => {
-    this.renderButtonOrSpinner();
+    //this.renderButtonOrSpinner();
     console.log('Console statements for login process...');
     let pageType = this.props.type;
     let emailVal = this.state.email;
     let passwordVal = this.state.password;
-
     if(passwordVal.length < 6) {
       this.errorCall('password should be greater than 5 characters.');
     }
@@ -45,7 +49,7 @@ export default class Form extends Component<{}> {
       });
     } else if (pageType === 'Signup') {
       firebase.auth().createUserWithEmailAndPassword(emailVal, passwordVal)
-      .then(() => { this.setState({ error: 'Contratulations...you are signed-up!!.', loading: false }); })
+      .then(() => { Actions.dashBoard(); this.setState({ error: 'Contratulations...you are signed-up!!.', loading: false }); })
       .catch(() => {
           this.setState({ error: 'Failed to create details to db...', loading: false });
       });
@@ -83,6 +87,7 @@ export default class Form extends Component<{}> {
            <TouchableOpacity style={styles.button}  onPress={this.onPress}>
              <Text style={styles.buttonText}>{this.props.type}</Text>
            </TouchableOpacity>     
+           <Text style={{color:'red'}}> {this.state.error} </Text>
           {/* {this.renderButtonOrSpinner()} */}
   		</View>
 			)
