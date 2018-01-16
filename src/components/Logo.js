@@ -5,28 +5,24 @@ import {
   View,
    Image 
 } from 'react-native';
+import styles from './Styles';
 
 export default class Logo extends Component<{}> {
 	render(){
 		return(
-			<View style={styles.container}>
+			<View style={loginStyles.container}>
 				<Image  style={{width:200, height: 80}}
           			source={require('../images/study.jpg')}/>
-          		<Text style={styles.logoText}>Welcome to easyLearning</Text>	
+          		<Text style={styles.buttonText}>Welcome to easyLearning</Text>	
   			</View>
 			)
 	}
 }
 
-const styles = StyleSheet.create({
+const loginStyles = StyleSheet.create({
   container : {
     flexGrow: 1,
     justifyContent:'flex-end',
     alignItems: 'center'
-  },
-  logoText : {
-  	marginVertical: 15,
-  	fontSize:18,
-  	color:'rgba(255, 255, 255, 0.7)'
   }
 });

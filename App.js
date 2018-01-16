@@ -14,6 +14,8 @@ import {
 
 import Routes from './src/Routes';
 import firebase from 'firebase';
+import DashBoard from './src/components/DashBoard';
+
 <StatusBar
 translucent
 backgroundColor="rgba(0, 0, 0, 0.24)"
@@ -39,6 +41,7 @@ export default class App extends Component<{}> {
            barStyle="light-content"
          />
         <Routes/>
+        {/*<DashBoard />*/}
       </View>
     );
   }

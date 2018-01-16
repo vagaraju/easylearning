@@ -23,12 +23,6 @@ export default class Spinner extends Component {
       //  flexGrow: 1,
         justifyContent:'center',
         alignItems: 'flex-end'
-    },
-    horizontal: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      padding: 10,
-      alignItems: 'center'
     }
   })
   

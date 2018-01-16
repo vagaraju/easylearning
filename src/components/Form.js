@@ -34,7 +34,7 @@ export default class Form extends Component<{}> {
     if(passwordVal.length < 6) {
       this.errorCall('password should be greater than 5 characters.');
     }
-
+Actions.dashBoard();
     if (pageType === 'Login') {
      firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal)
       .then(() => {    Actions.dashBoard();
@@ -49,7 +49,7 @@ export default class Form extends Component<{}> {
       .catch(() => {
           this.setState({ error: 'Failed to create details to db...', loading: false });
       });
-    }
+    } 
    }
    renderButtonOrSpinner() {
    if (this.state.loading) {
