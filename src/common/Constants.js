@@ -1,5 +1,5 @@
 
-const address = {
+const ADDRESS = {
     companyName: 'easyLearning inc.',
     address1: '1111 N 70th st ',
     address2: 'Scottsdale AZ 85251',
@@ -13,9 +13,9 @@ const MAP_CORDINATES = {
     LATITUDE_DELTA : 0.022 ,
 };
 const IMAGE_PATHS = {
-    MAP_IMAGE : "../images/map.png",
+    MAP_IMAGE : '../images/map.png',
 };
 
-module.exports = address;
-module.exports = {MAP_CORDINATES,IMAGE_PATHS};
+//module.exports = address;
+module.exports = {MAP_CORDINATES,IMAGE_PATHS,ADDRESS};
 //module.exports = IMAGE_PATHS;
