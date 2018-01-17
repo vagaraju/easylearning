@@ -16,7 +16,9 @@ export default class Signup extends Component<{}> {
   goBack() {
       Actions.pop();
   }
-
+	guest() {
+		Actions.dashBoard()
+	}
 	render() {
 		return(
 			<View style={styles.container}>
@@ -25,6 +27,7 @@ export default class Signup extends Component<{}> {
 				<View style={styles.signupTextCont}>
 					<Text style={styles.signupText}>Already have an account?</Text>
 					<TouchableOpacity onPress={this.goBack}><Text style={styles.signupButton}> Sign in</Text></TouchableOpacity>
+					<TouchableOpacity onPress={this.guest}><Text style={styles.signupButton}> / Guest</Text></TouchableOpacity>
 				</View>
 			</View>	
 			)

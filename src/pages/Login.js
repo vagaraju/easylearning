@@ -16,6 +16,9 @@ export default class Login extends Component<{}> {
 	signup() {
 		Actions.signup()
 	}
+	guest() {
+		Actions.dashBoard()
+	}
 
 	render() {
 		return(
@@ -25,6 +28,7 @@ export default class Login extends Component<{}> {
 				<View style={styles.signupTextCont}>
 					<Text style={styles.signupText}>Don't have an account yet?</Text>
 					<TouchableOpacity onPress={this.signup}><Text style={styles.signupButton}> Signup</Text></TouchableOpacity>
+					<TouchableOpacity onPress={this.guest}><Text style={styles.signupButton}> / Guest</Text></TouchableOpacity>
 				</View>
 			</View>	
 			)
