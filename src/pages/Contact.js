@@ -2,6 +2,7 @@ import React from 'react';
 import {Text,View,Image,AppRegistry} from 'react-native';
 
 import styles from '../components/Styles';
+import address from '../common/Constants';
 
 export default class Contact extends React.Component {
     static navigationOptions = {
@@ -14,11 +15,12 @@ export default class Contact extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.buttonText}> easyLearning Inc.</Text>
-                <Text style={styles.buttonText}> 1111 N 70th st Apt 101.</Text>
-                <Text style={styles.buttonText}> Scottsdale , AZ.</Text>
-                <Text style={styles.buttonText}> USA - 85251.</Text>
-                <Text style={styles.buttonText}> Phone : (480) 765-1038</Text>
+                <Text style={styles.buttonText}> {address.companyName}</Text>
+                <Text style={styles.buttonText}> {address.address1}</Text>
+                <Text style={styles.buttonText}>{address.address2}</Text>
+                <Text style={styles.buttonText}>{address.country}</Text>
+                <Text style={styles.buttonText}> Phone : {address.phone}</Text>
+                <Text style={styles.buttonText}> fax : {address.fax}</Text>
                 <Text style={styles.buttonText}> ----------------------</Text>
                 <Text style={[styles.buttonText]}> Email : vagarajug@gmail.com</Text>
             </View>
