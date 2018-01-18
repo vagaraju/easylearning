@@ -8,7 +8,7 @@ import {
 
 import Routes from './src/Routes';
 import firebase from 'firebase';
-import DashBoard from './src/components/DashBoard';
+import DashBoard from './src/components/bartabs/DashBoard';
 
 <StatusBar
 translucent

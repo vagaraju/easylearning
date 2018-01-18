@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppRegistry} from 'react-native';
-import NavigateTabs from '../components/NavigateTabs';
+import NavigateTabs from './NavigateTabs';
 
 export default class DashBoard extends React.Component {
     render(){
