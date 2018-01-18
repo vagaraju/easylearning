@@ -4,7 +4,7 @@ import {Text,View,Image,AppRegistry,StyleSheet,Dimensions} from 'react-native';
 //AIzaSyCNht_GKDHZmGv2vFjp4pSocwy4ZcbEcjM    -- map google
 //https://developers.google.com/maps/documentation/android-api/signup#release-cert   -- get the key.
 import MapView from 'react-native-maps';
-import styles from '../../components/Styles';
+import styles from '../../common/Styles';
 import {MAP_CORDINATES,IMAG_PATHS} from '../../common/Constants';
 
 const { width, height } = Dimensions.get('window');

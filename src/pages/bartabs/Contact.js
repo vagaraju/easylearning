@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text,View,Image,AppRegistry} from 'react-native';
 
-import styles from '../../components/Styles';
+import styles from '../../common/Styles';
 import {ADDRESS} from '../../common/Constants';
 
 export default class Contact extends React.Component {

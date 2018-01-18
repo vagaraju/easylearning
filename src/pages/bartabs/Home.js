@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text,View,Image,AppRegistry} from 'react-native';
 
-import styles from '../../components/Styles';
+import styles from '../../common/Styles';
     
 export default class Home extends React.Component {
     static navigationOptions = {

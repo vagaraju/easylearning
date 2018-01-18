@@ -9,7 +9,7 @@ import {Actions} from 'react-native-router-flux';
 
 import Logo from '../../common/Logo';
 import Form from './Form';
-import styles from '../../components/Styles';
+import styles from '../../common/Styles';
 
 export default class Signup extends Component<{}> {
 

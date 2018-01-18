@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 
 import Spinner from '../../common/Spinner';
-import styles from '../../components/Styles';
+import styles from '../../common/Styles';
 import { TxtInput,TxtButton } from '../../common/HtmlControls';
 
 export default class Form extends Component<{}> {
