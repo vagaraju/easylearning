@@ -5,13 +5,13 @@ import {Text,View,Image,AppRegistry,StyleSheet,Dimensions} from 'react-native';
 //https://developers.google.com/maps/documentation/android-api/signup#release-cert   -- get the key.
 import MapView from 'react-native-maps';
 import styles from '../components/Styles';
-import {MAP_CORDINATES,IMAGE_PATHS} from '../common/Constants';
-
+import {MAP_CORDINATES,IMAG_PATHS} from '../common/Constants';
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO  = width / height;
 const LONGITUDE_DELTA = (MAP_CORDINATES.LATITUDE_DELTA * ASPECT_RATIO);
-
+const imageSrc = require('../images/map.png')
 export default class Map extends React.Component {
+    
     static navigationOptions = {
         tabBarLabel : 'Map',
         tabBarIcon: () => (

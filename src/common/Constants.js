@@ -13,9 +13,8 @@ const MAP_CORDINATES = {
     LATITUDE_DELTA : 0.022 ,
 };
 const IMAGE_PATHS = {
-    MAP_IMAGE : '../images/map.png',
+    MAP_IMAGE : '../images/map.png'
 };
 
-//module.exports = address;
+
 module.exports = {MAP_CORDINATES,IMAGE_PATHS,ADDRESS};
-//module.exports = IMAGE_PATHS;
