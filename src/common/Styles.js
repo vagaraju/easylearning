@@ -12,6 +12,12 @@ const TabNavigatorConfig = {
       style: {
           backgroundColor:  constants.containerBgColor,
         },
+        tabStyle: {
+          width: 100,    
+        },
+        labelStyle: {
+          fontSize: 10,
+        },
       activeTintColor: '#ffffff',
       showIcon: true,
   }
