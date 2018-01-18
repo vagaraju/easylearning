@@ -8,7 +8,7 @@ import {
 import {Actions} from 'react-native-router-flux';
 
 import Logo from '../../components/Logo';
-import Form from '../../components/Form';
+import Form from './Form';
 import styles from '../../components/Styles';
 
 export default class Login extends Component<{}> {

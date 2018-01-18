@@ -8,12 +8,11 @@ import {
 } from 'react-native';
 
 import firebase from 'firebase';
-import Spinner from './Spinner';
-import styles from './Styles';
-
 import { Actions } from 'react-native-router-flux';
-import { TxtInput,TxtButton } from '../common/HtmlControls';
 
+import Spinner from '../../components//Spinner';
+import styles from '../../components/Styles';
+import { TxtInput,TxtButton } from '../../common/HtmlControls';
 
 export default class Form extends Component<{}> {
   constructor(props){
