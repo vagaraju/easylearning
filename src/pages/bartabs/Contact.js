@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text,View,Image,AppRegistry} from 'react-native';
 
-import styles from '../components/Styles';
-import {ADDRESS} from '../common/Constants';
+import styles from '../../components/Styles';
+import {ADDRESS} from '../../common/Constants';
 
 export default class Contact extends React.Component {
     static navigationOptions = {
         tabBarLabel : '',
         tabBarIcon: () => (
-            <Image source={require('../images/contact.png')} 
+            <Image source={require('../../images/contact.png')} 
             style={styles.tabImageColor}/>
         )
     }

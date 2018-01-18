@@ -1,13 +1,13 @@
 import React from 'react';
 import {Text,View,Image,AppRegistry} from 'react-native';
 
-import styles from '../components/Styles';
+import styles from '../../components/Styles';
     
 export default class Home extends React.Component {
     static navigationOptions = {
         tabBarLabel : 'Home',
         tabBarIcon: () => (
-            <Image source={require('../images/home.png')} 
+            <Image source={require('../../images/home.png')} 
             style={styles.tabImageColor}/>
         )
     }

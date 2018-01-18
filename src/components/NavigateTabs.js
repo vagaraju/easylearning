@@ -3,10 +3,10 @@ import {Text,View,Image,AppRegistry} from 'react-native';
 
 import {TabNavigator} from 'react-navigation';
 
-import Contact from '../pages/Contact';
-import Home from '../pages/Home';
-import Settings from '../pages/Settings';
-import Map from '../pages/Map';
+import Contact from '../pages/bartabs/Contact';
+import Home from '../pages/bartabs/Home';
+import Settings from '../pages/bartabs/Settings';
+import Map from '../pages/bartabs/Map';
 
 const NavigateTabs = TabNavigator({
     Home: { screen: Home },
