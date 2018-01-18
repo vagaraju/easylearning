@@ -2,7 +2,19 @@ import React, { Component } from 'react';
 import {AppRegistry,StyleSheet} from 'react-native';
 
 const constants = {
-  actionColor: '#455a64'
+  containerBgColor: '#455a64'
+};
+
+const TabNavigatorConfig = {
+  tabBarPosition: 'bottom',
+  animationEnabled: true,
+  tabBarOptions: {
+      style: {
+          backgroundColor:  constants.containerBgColor,
+        },
+      activeTintColor: '#ffffff',
+      showIcon: true,
+  }
 };
 
 const styles = StyleSheet.create({
@@ -60,3 +72,4 @@ const styles = StyleSheet.create({
 });
 module.exports = styles
 module.exports.constants = constants;
+module.exports.TabNavigatorConfig =TabNavigatorConfig;

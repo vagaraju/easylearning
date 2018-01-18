@@ -1,3 +1,6 @@
+import styles from './Styles';
+
+const constants = styles.constants;
 
 const ADDRESS = {
     companyName: 'easyLearning inc.',
@@ -13,8 +16,8 @@ const MAP_CORDINATES = {
     LATITUDE_DELTA : 0.022 ,
 };
 const IMAGE_PATHS = {
-    MAP_IMAGE : '../images/map.png'
+    MAP_IMAGE : '../images/map.png',
+    imagepath : '../../images/contact.png',
 };
-
 
 module.exports = {MAP_CORDINATES,IMAGE_PATHS,ADDRESS};
