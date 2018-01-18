@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Router, Stack, Scene} from 'react-native-router-flux';
 
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Login from './pages/login/Login';
+import Signup from './pages/login/Signup';
 import DashBoard from './components/DashBoard';
 import Error from './components/Error';
 
