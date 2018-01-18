@@ -4,7 +4,7 @@ import {Router, Stack, Scene} from 'react-native-router-flux';
 import Login from './pages/login/Login';
 import Signup from './pages/login/Signup';
 import DashBoard from './components/bartabs/DashBoard';
-import Error from './components/Error';
+import Error from './common/Error';
 
 export default class Routes extends Component<{}> {
 	render() {

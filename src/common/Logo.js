@@ -6,7 +6,7 @@ import {
    Image 
 } from 'react-native';
 
-import styles from './Styles';
+import styles from '../components/Styles';
 
 export default class Logo extends Component<{}> {
 	render(){
