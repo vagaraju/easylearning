@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
   View,
    Image 
 } from 'react-native';
 
 import styles from './Styles';
+import * as Constants from './Constants';
 
 export default class Logo extends Component<{}> {
 	render(){
 		return(
-				<View>
-						<Image  style={{width:200, height: 80}}
-										source={require('../images/study.jpg')}/>
+			<View>
+				<Image source={Constants.LOGO_IMG_PATH} style = {styles.logoImg}/>
           		<Text >Welcome to easyLearning</Text>	
   			</View>
 			)

@@ -74,6 +74,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     paddingTop: 10,
     paddingBottom: 10
+},
+  logoImg:{ 
+    width: 200, 
+    height: 80 
 }
 });
 module.exports = styles

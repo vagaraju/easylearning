@@ -2,7 +2,7 @@ import styles from './Styles';
 
 const constants = styles.constants;
 
-const ADDRESS = {
+export const ADDRESS = {
     companyName: 'easyLearning inc.',
     address1: '1111 N 70th st ',
     address2: 'Scottsdale AZ 85251',
@@ -10,14 +10,16 @@ const ADDRESS = {
     phone: '(480) 765-1038',
     fax:'1111111'
 };
-const MAP_CORDINATES = {
+export const MAP_CORDINATES = {
     LATITUDE : 33.4849108,
     LONGITUDE : -111.9322612,
     LATITUDE_DELTA : 0.022 ,
 };
-const IMAGE_PATHS = {
-    MAP_IMAGE : '../images/map.png',
-    imagepath : '../../images/contact.png',
+export const IMAGE_PATHS = {
+    CONTACT_IMG_PATH : require('../images/contact.png'),
+    HOME_IMG_PATH :require('../images/home.png'),
+    MAP_IMG_PATH :require('../images/map.png'),
+    SETTINGS_IMG_PATH :require('../images/settings.png'),
 };
-
-module.exports = {MAP_CORDINATES,IMAGE_PATHS,ADDRESS};
+export const LOGO_IMG_PATH  = require('../images/study.jpg');
+//module.exports = {MAP_CORDINATES,IMAGE_PATHS,ADDRESS};

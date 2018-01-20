@@ -5,18 +5,18 @@ import {Text,View,Image,AppRegistry,StyleSheet,Dimensions} from 'react-native';
 //https://developers.google.com/maps/documentation/android-api/signup#release-cert   -- get the key.
 import MapView from 'react-native-maps';
 import styles from '../../common/Styles';
-import {MAP_CORDINATES,IMAG_PATHS} from '../../common/Constants';
+import * as Constants from '../../common/Constants';
 
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO  = width / height;
-const LONGITUDE_DELTA = (MAP_CORDINATES.LATITUDE_DELTA * ASPECT_RATIO);
+const LONGITUDE_DELTA = (Constants.MAP_CORDINATES.LATITUDE_DELTA * ASPECT_RATIO);
 
 export default class Map extends React.Component {
     
     static navigationOptions = {
         tabBarLabel : 'Map',
         tabBarIcon: () => (
-            <Image source={require('../../images/map.png')} 
+            <Image source={Constants.IMAGE_PATHS.MAP_IMG_PATH}
             style={styles.tabImageColor}/>
         )
     }
@@ -28,15 +28,15 @@ export default class Map extends React.Component {
               showsMyLocationButton={false}
               zoomEnabled = {true}
               region={{
-                latitude: MAP_CORDINATES.LATITUDE,
-                longitude: MAP_CORDINATES.LONGITUDE,
-                latitudeDelta:MAP_CORDINATES.LATITUDE_DELTA,
+                latitude: Constants.MAP_CORDINATES.LATITUDE,
+                longitude: Constants.MAP_CORDINATES.LONGITUDE,
+                latitudeDelta:Constants.MAP_CORDINATES.LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
                 }} >
 
     <MapView.Marker
-            coordinate={{latitude: MAP_CORDINATES.LATITUDE,
-                longitude: MAP_CORDINATES.LONGITUDE}}
+            coordinate={{latitude: Constants.MAP_CORDINATES.LATITUDE,
+                longitude: Constants.MAP_CORDINATES.LONGITUDE}}
             title={"easyLearning"}
             description={"Interactive education game for kids"}
          />
