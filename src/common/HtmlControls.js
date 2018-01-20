@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput ,StyleSheet} from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
+import styles from './Styles';
 
-const TxtInput = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
+const TxtInput = ({ label, value, onChangeText, placeholder, secureTextEntry,backgroundColor }) => {
 
     const { inputStyle, labelStyle, containerStyle } = styles;
 
@@ -14,7 +15,7 @@ const TxtInput = ({ label, value, onChangeText, placeholder, secureTextEntry }) 
                  secureTextEntry={secureTextEntry}
                  value={value}
                  onChangeText={onChangeText}
-                 style={inputStyle}
+                 style={styles.inputBox}
                 />
         </View>
     );
@@ -25,45 +26,9 @@ const TxtButton = ({  placeholder}) => {
 
   return (
       <View>
-          <Text style={buttonText} />
+          <Text  style={styles.buttonText} />
       </View>
   );
 };
 
-const styles = StyleSheet.create({
-    container : {
-      flexGrow: 1,
-      justifyContent:'center',
-      alignItems: 'center'
-    },
-  
-    inputStyle: {
-      width:300,
-      backgroundColor:'rgba(255, 255,255,0.2)',
-      borderRadius: 25,
-      paddingHorizontal:16,
-      fontSize:16,
-      color:'#ffffff',
-      marginVertical: 10
-    },
-    button: {
-      width:300,
-      backgroundColor:'#1c313a',
-       borderRadius: 25,
-        marginVertical: 10,
-        paddingVertical: 13
-    },
-    buttonText: {
-      fontSize:16,
-      fontWeight:'500',
-      color:'white',
-      textAlign:'center'
-    },
-    errorTextStyle: {
-      color: '#E64A19',
-      alignSelf: 'center',
-      paddingTop: 10,
-      paddingBottom: 10
-  }
-  });
 export { TxtInput,TxtButton };

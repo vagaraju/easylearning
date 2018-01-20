@@ -63,21 +63,16 @@ export default class Form extends Component<{}> {
 	render(){
 		return(
 			<View>
-          <TxtInput   
-              underlineColorAndroid='rgba(0,0,0,0)' 
+          <TxtInput style={styles.inputBox}
               placeholder="Email"
-              placeholderTextColor = "#ffffff"
-              selectionColor="#fff"
               keyboardType="email-address"
               value={this.state.email}
               onChangeText = {(text) => this.setState({email : text,})}
               onSubmitEditing={()=> this.password.focus()}
           />
           <TextInput style={styles.inputBox}
-              underlineColorAndroid='rgba(0,0,0,0)' 
               placeholder="Password"
               secureTextEntry={true}
-              placeholderTextColor = "#ffffff"
               value={this.state.password}
               onChangeText={(value) => this.setState({password: value})}
               ref={(input) => this.password = input}

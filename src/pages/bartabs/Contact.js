@@ -7,7 +7,7 @@ import * as Constants from '../../common/Constants';
 
 export default class Contact extends React.Component {
     static navigationOptions = {
-        tabBarLabel : '',
+        tabBarLabel : 'Contact',
         tabBarIcon: () => (
             <Image source={Constants.IMAGE_PATHS.CONTACT_IMG_PATH}
             style={styles.tabImageColor}/>
