@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text,View,Image,AppRegistry,StyleSheet,Dimensions} from 'react-native';
+import {Text,View,Image,AppRegistry,StyleSheet,Dimensions,Platform} from 'react-native';
 //import styles from '../components/Styles';
 //AIzaSyCNht_GKDHZmGv2vFjp4pSocwy4ZcbEcjM    -- map google
 //https://developers.google.com/maps/documentation/android-api/signup#release-cert   -- get the key.
 import MapView from 'react-native-maps';
 import styles from '../../common/Styles';
 import * as Constants from '../../common/Constants';
+
 
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO  = width / height;
@@ -23,6 +24,8 @@ export default class Map extends React.Component {
     render(){
         return(
             <View style={styles.container}>
+            {Platform.OS === 'ios' ? <Text>Map display has some issues in ios..needs to resolve the same.</Text> : 
+
             <MapView style = {styles1.mapcontainer}
               showsUserLocation={true}
               showsMyLocationButton={false}
@@ -34,13 +37,14 @@ export default class Map extends React.Component {
                 longitudeDelta: LONGITUDE_DELTA,
                 }} >
 
-    <MapView.Marker
-            coordinate={{latitude: Constants.MAP_CORDINATES.LATITUDE,
-                longitude: Constants.MAP_CORDINATES.LONGITUDE}}
-            title={"easyLearning"}
-            description={"Interactive education game for kids"}
-         />
+                <MapView.Marker
+                    coordinate={{latitude: Constants.MAP_CORDINATES.LATITUDE,
+                        longitude: Constants.MAP_CORDINATES.LONGITUDE}}
+                    title={"easyLearning"}
+                    description={"Interactive education game for kids"}
+                />
             </MapView>
+            }
     </View>
            /* <View style={styles.container}>
                 <MapView
