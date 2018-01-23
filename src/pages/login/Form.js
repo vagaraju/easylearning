@@ -49,7 +49,8 @@ export default class Form extends Component<{}> {
     } else if (pageType === 'Signup') {
       firebase.auth().createUserWithEmailAndPassword(emailVal, passwordVal)
       .then(() => { Actions.dashBoard(); this.setState({ error: 'Contratulations...you are signed-up!!.', loading: false }); })
-      .catch(() => {
+      .catch((error) => {
+          console.log('firebase connection error ='+error);
           this.setState({ error: 'Failed to create details to db...', loading: false });
       });
     } 
